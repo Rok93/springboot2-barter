@@ -1,0 +1,8 @@
+spring:
+  jpa:
+    show-sql: true
+#  datasource:
+#    url:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: rok
+#    password: rok  <-- 암호화 처리하기 properties 통해서(이것도 yml 쓸 수 있는건가?) ${}
