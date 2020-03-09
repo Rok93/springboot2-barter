@@ -1,19 +1,15 @@
 package com.roki.springboot.domain.user;
 
-import com.roki.springboot.domain.boards.Board;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor
 @Entity
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -37,10 +33,6 @@ public class User {
         this.name = name;
         this.email = email;
         this.role = role;
-    }
-
-    public String getRoleKey() {
-        return this.role.getKey();
     }
 
 }
