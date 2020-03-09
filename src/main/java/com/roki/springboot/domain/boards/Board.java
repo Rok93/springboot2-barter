@@ -2,9 +2,7 @@ package com.roki.springboot.domain.boards;
 
 import com.roki.springboot.domain.BaseTimeEntity;
 import com.roki.springboot.domain.user.User;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -16,15 +14,16 @@ public class Board extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "USER_ID")
-    private Long userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(nullable = false)
     private BoardType boardType;
 
     @Builder
-    public Board(Long userId, BoardType boardType) {
-        this.userId = userId;
+    public Board(User user, BoardType boardType) {
+        this.user = user;
         this.boardType = boardType;
     }
 }
