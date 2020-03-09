@@ -1,5 +1,6 @@
-package com.roki.springboot.domain.boards;
+package com.roki.springboot.domain.barterboard;
 
+import com.roki.springboot.domain.boards.Board;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.roki.springboot.domain.boards;
+package com.roki.springboot.domain.barterboard;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
