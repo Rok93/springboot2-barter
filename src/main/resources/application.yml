@@ -4,9 +4,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
   h2:
     console:
       enabled: true
+
 #  datasource:
 #    url:
 #    driver-class-name: com.mysql.jdbc.Driver
